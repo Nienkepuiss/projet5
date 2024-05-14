@@ -1,0 +1,29 @@
+.card-logement{
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%), #ff6060; /* Dégradé linéaire de blanc à gris */
+}
+.card-logement_image{
+    max-width: 335px;
+    max-height: 255px;
+    border-radius: 10px;
+    padding: 5px;
+    object-fit: cover;
+}
+.card-logement_title{
+    position: absolute;
+    align-self: end;
+
+}
+.cards_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 20px;
+    margin: 5%;
+    background: #f6f6f6;
+
+}
