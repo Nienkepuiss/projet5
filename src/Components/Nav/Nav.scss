@@ -1,0 +1,22 @@
+.nav{
+   text-transform: none;
+
+   @include mobile {
+    text-transform: uppercase;
+   }
+}
+.Accueil, .Apropos{
+    color: black; 
+    text-decoration: none;
+    padding-left: 3.5rem;
+    font-size: 24px;
+
+    @include mobile {
+        padding-left: 0.8rem;
+        font-size: 12px;
+    }
+    
+    &:hover{
+    text-decoration: underline;
+}
+}

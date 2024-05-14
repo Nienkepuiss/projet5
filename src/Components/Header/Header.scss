@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5%;
+}
+.kasa-logo{
+    width: 13.2rem;
+
+    @include mobile {
+        width: 9rem;
+    }
+}
