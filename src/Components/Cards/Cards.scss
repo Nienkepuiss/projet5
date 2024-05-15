@@ -1,29 +1,57 @@
 .card-logement{
     position: relative;
-    display: grid;
-    grid-template-rows: auto 1fr;
+    display: flex;
     width: 340px;
     height: 340px;
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%), #ff6060; /* Dégradé linéaire de blanc à gris */
+    transition: transform 1s;
+
+    &:hover{
+        box-shadow: rgba(100, 100, 100, 0.9) 0 0 22px 6px;
+    }
+    
+    @include  mobile{
+        width: 335px;
+        height: 255px;
+    }
 }
 .card-logement_image{
-    max-width: 335px;
-    max-height: 255px;
+    display: flex;
+    width: 100%;
     border-radius: 10px;
-    padding: 5px;
     object-fit: cover;
 }
-.card-logement_title{
+.card-title{
+    display: flex;
+    align-items: flex-end;
     position: absolute;
-    align-self: end;
-
+    border-radius: 10px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px; 
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.card-logement_title{
+    display: flex;
+    position: absolute;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
 }
 .cards_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 20px;
-    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
     background: #f6f6f6;
+    border-radius: 25px;
+    width: 100%;
+    margin: 45px 0;
+    padding: 5% 1%;
 
+    @include mobile{
+        background: none;
+        gap: 20px;
+    }
 }
