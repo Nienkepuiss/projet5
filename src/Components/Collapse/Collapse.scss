@@ -1,24 +1,17 @@
 .collapse {
 	width: 100%;
-	margin: 30px auto 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-column;
 
-    @include mobile{
-        margin: 20px 0;
-    }
-
-	&__visible {
-		background: #FF6060;
+	&_visible {
+		background: $main-color;
 		cursor: pointer;
 		display: flex;
-		justify-content: space-between;
+        justify-content: space-between;
 		align-items: center;
 		height: 52px;
 		padding: 10px 20px 10px 15px;
 		border-radius: 5px;
-		width: 85%;
+		width: 100%;
     
         @include mobile{
             height: 30px;
@@ -26,49 +19,42 @@
         }
 
         h2{
-            color: #fff;
-            font-size: 24px;
-            font-weight: 700;
+            color: $third-color;
+            @include font(24px, 700);
 
             @include mobile{
-                font-size: 13px;
-                font-weight: 700;
+                @include font(13px, 700);
             }
         }
 	}
 
-	&__toggle {
+	&_toggle {
 		border-radius: 5px;
-        overflow: hidden;
 		transition: max-height 0.6s ease;
-        width: 85%;
+        width: 100%;
+        overflow: scroll;
 
         @include mobile{
             width: 100%;
         }
     }	
     
-    &__text {
+    &_text {
+            border-radius: 5px;
             color: #000;
-            background-color: #f6f6f6;
+            background-color: $second-color;
 			margin: 0;
 			padding: 22px 15px;
 			pointer-events: none;
-            font-size: 18px;
-            font-weight: 300;
+            @include font(18px, 300);
 
             @include mobile{
-                font-size: 12px;
-                font-weight: 300;
+                @include font(12px, 300);
             }
 		}
 
 }
-
-.animated{
-    transition: height 0.6s ease-in-out, opacity 0.6s 0.6s ease-in-out;
-}
-.arrow{
+.chevron{
    width: 24px;
    transition: -webkit-transform 0.6s ease;
    transition: transform 0.6s ease;
@@ -79,4 +65,13 @@
 }
 .rotated {
 	transform: rotate(180deg);
+}
+.about-style{
+    width: 85%;
+    margin: 30px auto 0;
+
+    @include mobile{
+        width: 100%;
+        margin: 20px 0;
+    }
 }

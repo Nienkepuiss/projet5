@@ -1,0 +1,59 @@
+.logement-info-tags-rating-host{
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+.host-wrapper{
+    @include flex-end;
+    gap: 10px; 
+    margin-top: 10px;  
+}
+.host-name{
+    @include font(18px, 500);
+    color: $main-color;
+
+    @include mobile{
+        font-size: 12px;
+    }
+}
+.host-picture{
+    border-radius: 100%;
+    width: 64px;
+
+    @include mobile{
+        width: 32px;
+    }
+}
+.logement-info-container{
+    margin: 0;
+    padding: 0;
+}
+.rating-host-wrapper{
+   @include mobile{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 8px;
+   } 
+}
+.equip-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.logement-collapse{
+    display: flex;
+    width: 100%;
+    gap: 76px;
+    margin: 30px auto 0;
+
+    @include mobile{
+        flex-direction: column;
+        gap: 15px;
+    }
+}

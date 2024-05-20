@@ -1,0 +1,17 @@
+.tags-container{
+    display: flex;
+    gap: 10px;
+}
+.tagsButton{
+    background-color: $main-color;
+    color: $third-color;
+    @include font(14px, 500);
+    @include small-radius;
+    height: 25px;
+    padding: 2px 10px 2px 10px;
+
+    @include mobile{
+        height: 18px;
+        @include font(10px, 500);
+    }
+}

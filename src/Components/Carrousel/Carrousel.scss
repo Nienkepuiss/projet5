@@ -1,0 +1,64 @@
+.gallery{
+    position: relative;
+}
+.image{
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+    @include radius;
+
+    @include mobile{
+        height: 255px;
+    }
+}
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 47px;
+    height: 80px;
+
+    @include mobile{
+        width: 12px;
+        height: 20px;
+    }
+}
+.right-arrow{
+    right: 0;
+    margin-right: 15px;
+}
+.left-arrow{
+    left: 0;
+    margin-left: 15px;
+}
+.logement-title{
+    @include font(36px, 500);
+    color: $main-color;
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    @include mobile{
+        font-size: 18px;
+    }
+}
+.logement-location{
+    @include font(18px, 500);
+    margin-top: 5px;
+
+    @include mobile{
+        font-size: 14px;
+    }
+}
+.gallery_number{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    color: $third-color;
+    @include font(18px, 500);
+
+    @include mobile{
+        opacity: 0;
+    }
+}
+

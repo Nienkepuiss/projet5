@@ -3,3 +3,45 @@
 	  @content;
 	}
   }
+
+@mixin WH-max{
+	width: 100%;
+	height: 100%;
+}  
+
+@mixin font ($size, $weight){
+	font-size: $size;
+	font-weight: $weight;
+}
+
+@mixin flex-column{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@mixin box-shadow{
+	box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+@mixin radius{
+	border-radius: 25px;
+}
+@mixin small-radius{
+	border-radius: 10px;
+}
+
+@mixin flex-end{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+@mixin flex-column{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+$main-color: #ff6060;
+$second-color: #f6f6f6;
+$third-color: #fff;

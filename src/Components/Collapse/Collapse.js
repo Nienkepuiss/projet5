@@ -1,43 +1,41 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Arrow from "../../Assets/arrow.png";
 
-function Collapse(props) {
-  const [toggle, setToggle] = useState(false);
-  const [heightEl, setHeightEl] = useState("0px");
-  const contentRef = useRef(null);
+export default function Collapse(props) {
+	const [toggle, setToggle] = useState(false); 
+	const [maxHeight, setMaxHeight] = useState("0px"); 
+	const toggleState = () => {
+		setToggle(!toggle);
+	};
 
-  useEffect(() => {
-    // Met à jour la hauteur du contenu lorsqu'il est ouvert
-    if (toggle) {
-      setHeightEl(`${contentRef.current.scrollHeight}px`);
-    } else {
-      setHeightEl("0px"); // Cache le contenu lorsqu'il est fermé
-    }
-  }, [toggle]);
+	const refHeight = useRef(); 
+	useEffect(() => {
+		if (refHeight.current) {
+			setMaxHeight(`${refHeight.current.scrollHeight}px`);
+		}
+	}, [toggle, refHeight.current ? refHeight.current.scrollHeight : 0]);
 
-  const toggleState = () => {
-    setToggle(!toggle);
-  };
-
-  return (
-    <div className={`collapse ${props.aproposStyle}`}>
-      <div onClick={toggleState} className="collapse__visible">
-        <h2>{props.aproposTitle}</h2>
-        <img
-          className={toggle ? "arrow rotated" : "arrow"}
-          src={Arrow}
-          alt="arrow"
-        />
-      </div>
-      <div
-        ref={contentRef}
-        className={`collapse__toggle ${toggle ? "animated" : ""}`}
-        style={{ height: heightEl }} >
-        <p className="collapse__text" aria-hidden={toggle ? "true" : "false"}>{props.aproposText}</p>
-      </div>
-    </div>
-  );
+	return (
+		<div className={`collapse ${props.aproposStyle}`}>
+			<div onClick={toggleState} className="collapse_visible">
+				<h2>{props.aproposTitle}</h2>
+				<img
+					className={toggle ? "chevron rotated" : "chevron"}
+					src={Arrow}
+					alt="chevron"
+				/>
+			</div>
+			<div
+				ref={refHeight}
+				className="collapse_toggle animated"
+				style={{ maxHeight: toggle ? maxHeight : "0px" }}
+			>
+				<div className="collapse_text" aria-hidden={toggle ? "false" : "true"}>
+					{props.aproposText}
+				</div>
+			</div>
+		</div>
+	);
 }
 
-export default Collapse;
 

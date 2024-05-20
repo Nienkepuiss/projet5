@@ -8,11 +8,11 @@ function APropos (){
             <AboutBanner />
             {DataCollapse.map((apropos, index) => (
 				<Collapse
-					aproposTitle={apropos.title}
-					aproposText={apropos.content}
-					key={index}
-                    aproposStyle="about-style"
-				/>
+                key={index}
+                aproposTitle={apropos.title}
+                aproposText={apropos.content}
+                aproposStyle="about-style"
+              />
 			))}
         </section>
     )

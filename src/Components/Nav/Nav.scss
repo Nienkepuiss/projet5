@@ -9,11 +9,11 @@
     color: black; 
     text-decoration: none;
     padding-left: 3.5rem;
-    font-size: 24px;
+    @include font(24px, 400);
 
     @include mobile {
         padding-left: 0.8rem;
-        font-size: 12px;
+        @include font (12px, 400);
     }
     
     &:hover{

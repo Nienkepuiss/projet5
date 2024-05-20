@@ -2,18 +2,15 @@
     position: relative; 
     width: 100%;
     border: 1px;
-    border-radius: 25px;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include small-radius;
+    @include box-shadow;
 }
 
 .banner-img {
     width: 100%; 
     display: block;
     height: 223px;
-    border-radius: 25px;
+    @include small-radius;
     object-fit: cover;
     filter: brightness(40%);
 
@@ -28,14 +25,15 @@
     left: 50%; 
     transform: translate(-50%, -50%); 
     text-align: center; 
-    color: #fff;
-    font-size: 48px;
-    font-weight: 700;
+    color: $third-color;
+    @include font(48px, 700);
     width: 100%;
     text-shadow: 0 4px 4px rgba(0,0,0,0.25);
 
     @include mobile{
         font-size: 24px;
+        width: 225px;
+        text-align: start;
     }
 }
 
