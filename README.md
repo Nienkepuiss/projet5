@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Kasa : React web app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was completed as part of the Web Developper training program at [OpenClassrooms](https://openclassrooms.com/fr/paths/899-developpeur-web).
 
-## Available Scripts
+> Implement the front-end of a housing rental application 🏘️
+> Set up components with React and application routes with React Router ⚛️
 
-In the project directory, you can run:
+### Technical constraints :
 
-### `npm start`
+-   Tools:
+    -   Create React App.
+    -   React Router.
+    -   The use of Sass is optional. CSS is to be used by default.
+    -   No external React library.
+-   React:
+    -   Logical structure of different files.
+    -   Modular and reusable component breakdown (one component per file).
+    -   It is recommended to use functional components instead of class components.
+    -   Use of props between components.
+    -   Use of state in components when necessary.
+    -   Event handling.
+    -   Use lists as much as possible by iterating over them (for example with map).
+-   React Router:
+    -   Router logic is consolidated into a single file.
+    -   There is one page per route.
+    -   Route parameters are managed by React Router in the URL to retrieve information for each lodging.
+    -   The 404 page is returned for each non-existent route, or if a value in the URL is not part of the data provided.
+    -   General: The code should not produce any errors or warnings in the console.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Functional constraints :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-   For scrolling through photos in the gallery (Gallery component):
+    -   If the user is on the first image and clicks "previous", the gallery displays the last image.
+    -   Conversely, when the displayed image is the last in the gallery, if the user clicks "next", the gallery displays the first image.
+    -   If there is only one image, the "next" and "previous" buttons do not appear.
+    -   The gallery must always remain the same height, as indicated in the Figma mockup. The images will therefore be cropped and centered within the image frame.
+-   Collapse:
+    -   By default, the Collapses are closed when the page is initialized.
+    -   If the Collapse is open, the user's click should close it.
+    -   Conversely, if the Collapse is closed, a click should open it.
 
-### `npm test`
+## Built with :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,sass,figma,github,html,js,vscode" />
+  </a>
+</p>
 
-### `npm run build`
+Use of `Figma` for design.<br>
+Use of `React` for development and `Saas` for styling.<br>
+Use of `GitHub` for version control.<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   `git clone https://github.com/Nienkepuiss/projet5`
 
-### `npm run eject`
+2. Install all dependencies for Front-end:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   `npm install` or `yarn`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Launch front-end:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   `npm start` or `yarn start`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Front-end will launch at URL:
+`http://localhost:3000`
