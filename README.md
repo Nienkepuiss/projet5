@@ -2,7 +2,7 @@
 
 This project was completed as part of the Web Developper training program at [OpenClassrooms](https://openclassrooms.com/fr/paths/899-developpeur-web).
 
-> Implement the front-end of a housing rental application 🏘️
+> Implement the front-end of a housing rental application 🏘️ <br>
 > Set up components with React and application routes with React Router ⚛️
 
 ### Technical constraints :
