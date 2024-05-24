@@ -43,12 +43,12 @@ This project was completed as part of the Web Developper training program at [Op
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,sass,figma,github,html,js,vscode" />
+    <img src="https://skillicons.dev/icons?i=react,css,figma,github,html,js,vscode" />
   </a>
 </p>
 
 Use of `Figma` for design.<br>
-Use of `React` for development and `Saas` for styling.<br>
+Use of `React` for development and `SCSS` for styling.<br>
 Use of `GitHub` for version control.<br>
 
 ## Installation:
