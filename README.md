@@ -49,7 +49,7 @@ This project was completed as part of the Web Developper training program at [Op
 
 Use of `Figma` for design.<br>
 Use of `React` for development and `SCSS` for styling.<br>
-Use of `GitHub` for version control.<br>
+Use of `Git` for version control.<br>
 
 ## Installation:
 
